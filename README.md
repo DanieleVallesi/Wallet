@@ -1,5 +1,5 @@
-## Wallet Microservice
-This microservice manage wallets of different customers.<br/>
+## Wallet
+This is a back end API that manage wallets of different customers.<br/>
 ##### Create user request: 
 POST: `` http://localhost:8080/wallet/create-user``<br/>
 BODY: ``{"userUuid" : "cf8d3cdd-07b4-4499-aede-cb5dd98a3be2", "name" : "Mark", "balance" : 1000 }``<br/>
