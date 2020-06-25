@@ -23,7 +23,4 @@ The db will be created in `` C:\Users\UserName\wallet-microservice-db.mv.db ``
 
 #### Considerations
 
-*Creating a new user and changing money in one account require a post and an external uuid. In this way if mistakenly multiple requests are sent, only the 1st one will be accepted and the others will be rejected*
-
-*There are not tests as of now*
-
+*Creating a new user and changing balance in one account require a post and an external uuid. In this way if mistakenly multiple requests are sent, only the 1st one will be accepted and the others will be rejected*
