@@ -11,7 +11,7 @@ GET: `` http://localhost:8080/wallet/get-user-balance?userUuid=cf8d3cdd-07b4-449
 ##### Get transaction history request
 GET: `` http://localhost:8080/wallet/transaction-history?userUuid=cf8d3cdd-07b4-4499-aede-cb5dd98a3be2 ``<br/>
 
-##### Access DB: 
+##### DB Access: 
 URL :``http://localhost:8080/h2-console``<br/>
 JDBC URL: ``jdbc:h2:file:~/wallet-db``<br/>
 Username : ``sa``<br/>
@@ -19,7 +19,9 @@ Password : ``no password, leave it empty``<br/>
 
 ### General Info
 
-The db will be created in `` C:\Users\UserName\wallet-microservice-db.mv.db ``
+There is a Postman collection of all needed call into resources folder.
+
+The db will be created in `` C:\Users\'UserName'\wallet-db.mv.db ``
 
 #### Considerations
 
