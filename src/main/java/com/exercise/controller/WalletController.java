@@ -21,7 +21,7 @@ public class WalletController {
     WalletService walletService;
 
     @PostMapping(path = "/change-user-balance")
-    public @ResponseBody ResponseEntity<Integer> changeUserBalance(@RequestBody ChangeBalanceRequest body){
+    public @ResponseBody ResponseEntity<Integer> changeUserBalance(@Valid @RequestBody ChangeBalanceRequest body){
         return new ResponseEntity<>(walletService.changeUserBalance(body.getUserUuid(), body.getTransactionUuid(), body.getAmmount()), HttpStatus.OK) ;
     }
 
