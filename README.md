@@ -13,7 +13,7 @@ GET: `` http://localhost:8080/wallet/transaction-history?userUuid=cf8d3cdd-07b4-
 
 ##### Access DB: 
 URL :``http://localhost:8080/h2-console``<br/>
-JDBC URL: ``jdbc:h2:file:~/wallet-microservice-db``<br/>
+JDBC URL: ``jdbc:h2:file:~/wallet-db``<br/>
 Username : ``sa``<br/>
 Password : ``no password, leave it empty``<br/>
 
@@ -23,4 +23,5 @@ The db will be created in `` C:\Users\UserName\wallet-microservice-db.mv.db ``
 
 #### Considerations
 
-*Creating a new user and changing balance in one account require a post and an external uuid. In this way if mistakenly multiple requests are sent, only the 1st one will be accepted and the others will be rejected*
+*Creating a new user and changing balance in one account require a post and an external uuid.*<br/>
+*Uuids can be generated randomly and are unique.*
