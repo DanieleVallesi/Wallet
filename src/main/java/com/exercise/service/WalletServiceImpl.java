@@ -31,8 +31,7 @@ public class WalletServiceImpl implements WalletService {
         if (user == null) throw new EntityDoesntExistException("User with Uuid: " + userUuid + " doesn't exist");
 
         //check if transaction was already done with that Id
-        Transaction transaction = transactionRepository.findByUuid(transactionUuid);
-        if (transaction != null)
+        if (transactionRepository.findByUuid(transactionUuid) != null)
             throw new EntityAlreadyExistException("Transaction with Uuid: " + transactionUuid + " already exist");
 
         //check if the user has enough money
@@ -40,7 +39,7 @@ public class WalletServiceImpl implements WalletService {
             throw new NotEnoughBalanceException("The user has only a balance of : " + user.getBalance() + " , meanwhile it was requested a change of: " + ammount);
         }
 
-        transaction = new Transaction(transactionUuid, new Date(), ammount, user);
+        Transaction transaction = new Transaction(transactionUuid, new Date(), ammount, user);
         user.getTransactionList().add(transaction);
         user.setBalance(user.getBalance() + ammount);
 
