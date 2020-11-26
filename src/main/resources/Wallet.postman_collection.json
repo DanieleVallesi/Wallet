@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "ede8e855-8793-4481-a458-74980dd99b6b",
+		"name": "Wallet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreateUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userUuid\" : \"cf8d3cdd-07b4-4499-aede-cb5dd98a3be2\", \"name\" : \"Mark\", \"balance\" : 1000}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/wallet/create-user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"wallet",
+						"create-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserBalance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/wallet/get-user-balance?userUuid=cf8d3cdd-07b4-4499-aede-cb5dd98a3be2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"wallet",
+						"get-user-balance"
+					],
+					"query": [
+						{
+							"key": "userUuid",
+							"value": "cf8d3cdd-07b4-4499-aede-cb5dd98a3be2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChangeUserBalance",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userUuid\" : \"cf8d3cdd-07b4-4499-aede-cb5dd98a3be2\", \"transactionUuid\" : \"08de1695-52cd-4f9a-86d5-00c4835188\", \"ammount\" : 100 }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/wallet/change-user-balance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"wallet",
+						"change-user-balance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTransactionHistory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/wallet/transaction-history?userUuid=cf8d3cdd-07b4-4499-aede-cb5dd98a3be2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"wallet",
+						"transaction-history"
+					],
+					"query": [
+						{
+							"key": "userUuid",
+							"value": "cf8d3cdd-07b4-4499-aede-cb5dd98a3be2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
