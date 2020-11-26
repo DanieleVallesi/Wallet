@@ -11,10 +11,11 @@ import java.util.List;
 
 @Entity
 @Getter @Setter @NoArgsConstructor
+@SequenceGenerator(name="PRIVATE_SEQ", sequenceName="userSequence")
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(generator = "PRIVATE_SEQ", strategy = GenerationType.SEQUENCE)
     private int id;
 
     private String uuid;
