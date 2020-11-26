@@ -4,14 +4,19 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.validator.constraints.Range;
 
-import javax.validation.constraints.Min;
+import javax.validation.constraints.*;
 
-@Getter @Setter @AllArgsConstructor @NoArgsConstructor
+@Getter @AllArgsConstructor
 public class CreateUserRequest {
+
+    @NotEmpty(message = "userUuid can not be empty")
     private String userUuid;
+
+    @NotEmpty(message = "name can not be empty")
     private String name;
 
-    @Min(0) // This will get checked with @Value in the controller
+    @Positive // This will get checked with @Value in the controller
     private int balance;
 }
