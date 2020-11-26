@@ -19,7 +19,7 @@ Password : ``no password, leave it empty``<br/>
 
 ### General Info
 
-There is a Postman collection of all needed call into resources folder.
+There is a Postman collection of all needed calls into resources folder.
 
 The db will be created in `` C:\Users\'UserName'\wallet-db.mv.db ``
 
