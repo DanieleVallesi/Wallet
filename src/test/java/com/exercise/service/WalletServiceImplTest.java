@@ -43,8 +43,8 @@ public class WalletServiceImplTest {
         when(transactionRepositoryMock.findByUuid("1")).thenReturn(null);
 
         // Test
-        walletServiceImpl.changeUserBalance(mockUser.getUuid(), "1", 300);
-        assertEquals(1300, mockUser.getBalance());
+        int result = walletServiceImpl.changeUserBalance(mockUser.getUuid(), "1", 300);
+        assertEquals(result, 1300);
     }
 
     @Test(expected = EntityAlreadyExistException.class)
